@@ -72,6 +72,6 @@ class LigasController extends Controller
 
         $liga->delete();
 
-        return redirect()->route('ligas.index');
+        return redirect()->route('ligas.indexLigas');
     }
 }
