@@ -29,6 +29,7 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required|string|min:5|max:255',
             'age' => 'required|integer|min:1',
+            
         ]);
 
          // Crear un nuevo estudiante usando el método `create` del modelo

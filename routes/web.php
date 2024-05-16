@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ligasController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,8 +19,10 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    //ruta para el controller Student
+    // Ruta para el controlador de estudiantes
     Route::resource('students', StudentController::class);
+
+    // Ruta para el controlador de equipos
+    Route::resource('equipos', EquipoController::class);
+    Route::resource('ligas', ligasController::class);
 });
-
-
